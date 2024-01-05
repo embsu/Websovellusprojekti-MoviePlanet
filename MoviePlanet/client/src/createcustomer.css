@@ -1,0 +1,50 @@
+/* Styling modal window*/
+.modal {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 60%; 
+    max-width: 400px; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+
+  .close {
+    position: absolute;
+    top: -2%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+  }
+
+  #RegisterBtn, input[type=text], input[type=password] {
+    display: block;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  #RegisterBtn {
+    cursor: pointer;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .success {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+
+  

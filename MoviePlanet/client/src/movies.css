@@ -1,0 +1,86 @@
+.movies-input {
+  max-width: 30%; 
+  margin-right: 50px; 
+  margin-left: 50px;
+  background-color: #00000050;
+  color: rgba(255, 255, 255, 0.925);
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 50px;
+  align-items: start;
+}
+
+.movie-item {
+  flex: 0 0 calc(20% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.genre-buttons {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.genre-buttons button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #00000050;
+  color: rgba(255, 255, 255, 0.925);
+  border-radius: 5px;
+}
+
+.genre-buttons button.active {
+  background-color: #eb00eb;
+  color: white;
+}
+
+.movie-item {
+  flex: 0 0 calc(20% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.lisaaArvosteluBtn {
+  padding: 8px;
+  background-color: rgba(40, 40, 40, 0.845);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: -3%;
+  left: 80%;
+  translate: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.lisaaArvosteluBtn:hover {
+  background-color: rgb(177, 57, 173);
+}

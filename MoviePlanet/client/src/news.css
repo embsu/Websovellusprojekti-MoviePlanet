@@ -1,0 +1,112 @@
+#uutisetPage {
+    margin: 0 auto;
+}
+
+#uutiset {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+/* Simple news style */
+#uutisetLiItem {
+    margin-bottom: 0px;
+}
+#uutisetLiItem  button.share-button{
+    background-color: rgb(49, 51, 51);
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+#uutisetLiItem button.share-button img{
+    max-width: 25px;
+    margin-right: 5px;
+    margin-left: -10px;
+    margin-top: -15px;
+}
+#uutisetLiItem button.share-button:hover::before {
+    content: "Jaa"; 
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: -30px; 
+    margin-left: -10px; 
+}
+#newsUutisettxt{
+    margin-left: 2%;
+    font-size: 1.5em;
+    color: #EEEEEE;
+    margin-top: 1%;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+/* News header */
+#uutisetTitletxt {
+    margin-left: 2%;
+    font-size: 1em;
+    color: #EEEEEE;
+    margin-top: 1%;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+#uutisKuva {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+#articleLink {
+    text-decoration: none;
+    color: #007bff; 
+}
+
+#articleLink:hover {
+    text-decoration: underline; 
+    color:#a45caa;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(49, 51, 51);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #EEEEEE;
+}
+
+/* Tyyli dropdown-valikolle */
+.modal select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Tää on hyvä kaveri*/
+.modal button {
+    background-color: #a45caa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+
+
+

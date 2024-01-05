@@ -1,0 +1,31 @@
+#groupnews {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .groupnewsitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    margin-bottom: 20px;
+
+  }
+  
+  .groupnewspic {
+    max-width: 50%; 
+    height: auto; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .groupnewstitle {
+    font-size: 1.5em;
+    margin: 5px 0; 
+  }
+  
+  .groupnewslink {
+    text-decoration: none; 
+    color: #a45caa; 
+  }
+  

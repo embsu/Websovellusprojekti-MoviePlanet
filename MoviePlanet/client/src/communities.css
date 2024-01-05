@@ -1,0 +1,165 @@
+
+#Communities {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 20px;
+}
+
+#Communities h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    font-size: 3em;
+}
+
+#kryhmat {
+    display: flex;
+    text-align: left;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    margin-left: 35px;
+}
+
+
+#SearchGroupInp {
+    display: flex;
+    gap: 20px;
+    align-items: left;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+#SearchGroupBtn {
+    cursor: pointer;
+    border: none;
+    background-color: #a45caa;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    align-items: center;
+    height: 45px;
+}
+
+#Searchp {
+    height: 25px;
+}
+
+#SearchGroupInput {
+    width: calc(50% - 220px);
+    height: 25px;
+    border: 2px solid #a45caa;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+#GroupInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #47474773;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+    color: #eeeeee;
+}
+
+#GroupInfo img {
+    border-radius: 5px;
+    width: 200px;
+}
+
+#openCreateGroupBtn,
+#CreateGroupBtn {
+    cursor: pointer;
+    border: none;
+    height: 45px;
+    background-color: #a45caa;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+#SearchGroupBtn:hover {
+    box-shadow: 6px 6px 6px 6px #131212;
+}
+
+#SearchGroupBtn img:hover {
+    transform: rotate(360deg);
+}
+
+#openCreateGroupBtn:hover, #CreateGroupBtn:hover {
+    background-color: #874c86;
+    box-shadow: 6px 6px 6px 6px #131212;
+}
+
+.modal #Modalh2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}   
+.AllGroups {
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+}
+
+.GroupList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.GroupItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #47474773;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+    color: #eeeeee;
+    box-shadow: 6px 6px 19px 1px #000000;
+}
+
+.GroupItem img {
+    border-radius: 5px;
+    height: 200px;
+}
+
+.GroupItem h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #a45caa;
+}
+
+.GroupItem p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.GroupItem #JoinGroupBtn, #GroupInfo button {
+    cursor: pointer;
+    border: none;
+    background-color: #a45caa;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#JoinGroupBtn:hover {
+    background-color: #874c86;
+    box-shadow: 6px 6px 6px 6px #131212;
+}

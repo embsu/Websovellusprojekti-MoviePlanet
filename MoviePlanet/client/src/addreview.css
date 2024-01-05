@@ -1,0 +1,100 @@
+.review-popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.081);
+    z-index: 1000;
+}
+
+.review-popup {
+    background: rgb(6, 6, 6);
+    color: #eeeeee;
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.star-rating {
+    font-size: 24px;
+}
+
+.star {
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+}
+
+.star.selected {
+    color: yellow;
+}
+
+.star:hover {
+    color: yellow;
+}
+
+#addReview_star {
+    font-size: 40px;
+}
+
+#addReview_textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: rgb(72, 72, 72);
+    color: #eeeeee;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+}
+
+#addReview_send_btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: rgb(100, 190, 100);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+}
+
+#addReview_send_btn:hover {
+    background-color: rgb(100, 255, 100);
+    color: black;
+}
+
+#addReview_close_btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: rgb(190, 100, 100);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+}
+
+#addReview_close_btn:hover {
+    background-color: rgb(255, 100, 100);
+    color: black;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1200px) {
+    .review-popup {
+        padding: 40px;
+
+    }
+}

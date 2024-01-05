@@ -1,0 +1,252 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-14T09:12:51.545Z",
+    "end": "2023-12-14T09:12:55.188Z",
+    "duration": 3643,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02f60f98-83d5-4b59-9e04-977269c60333",
+      "title": "",
+      "fullFile": "/Users/kykyri/Documents/GitHub/websovellusprojekti/MoviePlanet/test/customer.js",
+      "file": "/test/customer.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+          "title": "Customer Route Tests",
+          "fullFile": "/Users/kykyri/Documents/GitHub/websovellusprojekti/MoviePlanet/test/customer.js",
+          "file": "/test/customer.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Customer Route Tests\"",
+              "fullTitle": "Customer Route Tests \"before all\" hook in \"Customer Route Tests\"",
+              "timedOut": false,
+              "duration": 946,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "pgPool.connect((err) => {\n    if (err) {\n        console.error('Error connecting to Postgres database');\n        console.error(err.message);\n        done(err);\n    } else {\n        server = app.listen(3002, () => {\n            done();\n        });\n    }\n});",
+              "err": {},
+              "uuid": "c0d963f6-de39-4d5d-8c7a-6d7dc5c09f0c",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Customer Route Tests\"",
+              "fullTitle": "Customer Route Tests \"after all\" hook in \"Customer Route Tests\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "server.close(() => { // Close server\n    pgPool.end(); // Close database connection\n    done();\n});",
+              "err": {},
+              "uuid": "c04f67b4-09f7-4d19-8224-6c878d98bde1",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Hae kaikki käyttäjät",
+              "fullTitle": "Customer Route Tests Hae kaikki käyttäjät",
+              "timedOut": false,
+              "duration": 1929,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(app)\n    .get('/customer')\n    .end((err, res) => {\n        res.should.have.status(200);\n        res.body.should.be.an('array');\n        done();\n    });",
+              "err": {},
+              "uuid": "faa7970b-c4a3-4ad2-bd6d-4acab7e0bea8",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Luo käyttäjän",
+              "fullTitle": "Customer Route Tests Luo käyttäjän",
+              "timedOut": false,
+              "duration": 147,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(app)\n    .post('/customer')\n    .send({\n        fname: 'tintti',\n        lname: 'tinttinen',\n        username: 'tintti',\n        pw: '1234',\n    })\n    .end((err, res) => {\n        res.should.have.status(200);\n        done();\n    });",
+              "err": {},
+              "uuid": "0ac5c5b2-5701-473c-919d-7d2888154c13",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Väärä salasana",
+              "fullTitle": "Customer Route Tests Väärä salasana",
+              "timedOut": false,
+              "duration": 140,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(app)\n    .post('/customer/login')\n    .send({\n        username: 'tintti',\n        pw: '12345',\n    })\n    .end((err, res) => {\n        res.should.have.status(401);\n        done();\n    });",
+              "err": {},
+              "uuid": "b376edee-7b77-4dd1-ad91-907a036c2e90",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Käyttäjää ei löytynyt",
+              "fullTitle": "Customer Route Tests Käyttäjää ei löytynyt",
+              "timedOut": false,
+              "duration": 47,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(app)\n    .post('/customer/login')\n    .send({\n        username: 'tinttinen',\n        pw: '1234',\n    })\n    .end((err, res) => {\n        res.should.have.status(404);\n        done();\n    });",
+              "err": {},
+              "uuid": "854654d8-3230-4008-b5e5-9db36d66cfc8",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Kirjaudu sisään",
+              "fullTitle": "Customer Route Tests Kirjaudu sisään",
+              "timedOut": false,
+              "duration": 114,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(app)\n    .post('/customer/login')\n    .send({\n        username: 'tintti',\n        pw: '1234',\n    })\n    .end((err, res) => {\n        res.should.have.status(200);\n        res.body.should.have.property('jwtToken');\n        authToken = res.body.jwtToken;\n        console.log(authToken);\n        done();\n    });",
+              "err": {},
+              "uuid": "2dea3d10-9b65-478b-9e0e-1c91968cac69",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Poista käyttäjä",
+              "fullTitle": "Customer Route Tests Poista käyttäjä",
+              "timedOut": false,
+              "duration": 256,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"Tässä on token delete: \" +authToken);\nchai.request(app)\n    .delete('/customer/tintti')\n    .set('Authorization', `Bearer ${authToken}`)\n    .end((err, res) => {\n        res.should.have.status(200);\n        done();\n    });",
+              "err": {},
+              "uuid": "5aebb63f-41b0-4dfb-8e73-4b8b49895bbd",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "poista olematon käyttäjä",
+              "fullTitle": "Customer Route Tests poista olematon käyttäjä",
+              "timedOut": false,
+              "duration": 55,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(app)\n    .delete('/customer/tinttinen')\n    .set('Authorization', `Bearer ${authToken}`)\n    .end((err, res) => {\n        res.should.have.status(404);\n        done();\n    });",
+              "err": {},
+              "uuid": "5b99fec8-ba95-4831-8c6f-e9074214f9e7",
+              "parentUUID": "0b3d7586-24ce-44b8-b1ac-6f0729d724a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "faa7970b-c4a3-4ad2-bd6d-4acab7e0bea8",
+            "0ac5c5b2-5701-473c-919d-7d2888154c13",
+            "b376edee-7b77-4dd1-ad91-907a036c2e90",
+            "854654d8-3230-4008-b5e5-9db36d66cfc8",
+            "2dea3d10-9b65-478b-9e0e-1c91968cac69",
+            "5aebb63f-41b0-4dfb-8e73-4b8b49895bbd",
+            "5b99fec8-ba95-4831-8c6f-e9074214f9e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2688,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

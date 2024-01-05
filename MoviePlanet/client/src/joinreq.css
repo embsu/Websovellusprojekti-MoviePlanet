@@ -1,0 +1,93 @@
+body {
+    letter-spacing: 2px;
+}
+
+#joinRequests {
+    max-width: 50%;
+    margin: 50px auto;
+    border: 2px solid rgb(173, 162, 172);
+    background-color: #47474773;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+    color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#joinRequests h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Advent Pro', sans-serif;
+    color: #eeeeee;
+}
+
+select{
+    margin: 10px;
+    padding: 8px;
+    background-color: rgb(55, 55, 55);
+    color: #eeeeee;
+  }
+  
+  select + label {
+    margin-left: 20px;
+  }
+
+ #removeMembButton {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: rgb(190, 100, 100);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.403);
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid rgb(173, 162, 172);
+  }
+  
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #approveButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: rgb(100, 190, 100);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #rejectButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: rgb(190, 100, 100);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } 
+
+
+
+
+

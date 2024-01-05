@@ -1,0 +1,195 @@
+#sivunnimi,
+#sivunnimi a {
+    color: #dd7be6;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 40px;
+    margin-left: 0px;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: 2px 2px 0 #621448, 2px -2px 0 #621448, -2px 2px 0 #621448, -2px -2px 0 #621448, 2px 0px 0 #621448, 0px 2px 0 #621448, -2px 0px 0 #621448, 0px -2px 0 #621448, 0 0 10px #af98b5;
+    margin-right: 40px;
+}
+
+/*WHOLE NAVBAR*/
+#navbar {
+    background-color: #00000043;
+    color: #EEEEEE;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/*ONLY LINKS*/
+#legit-nav-linkit a {
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+    color: #EEEEEE;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#legit-nav-linkit a:hover {
+    color: #000000;
+    background-color: rgb(187, 187, 187);
+}
+
+/* NOTIFICATIONS & SETTINGS */
+#notif-settings {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_bellSet {
+    height: 25px;
+    width: 25px;
+    transition: ease-in-out 0.3s;
+    padding: 10px;
+    border: none;
+}
+
+.nav_bellSet:hover {
+    transform: rotate(20deg);
+}
+
+/*_____WHEN LOGGED IN______*/
+#mobile-nav-linkit {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 40px;
+}
+
+#navbarWelcome {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+#navbarProfileImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.buttons button {
+    padding: 10px 15px;
+    background-color: #dd7be6;
+    color: #EEEEEE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 18px;
+    border: 1px solid rgb(117, 110, 116);
+}
+
+.buttons button:hover {
+    background-color: rgb(187, 187, 187);
+    color: #000000;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1480px) {
+    h1#sivunnimi {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    #mobile-nav-linkit {
+        margin-left: 10px;
+    }
+
+    #navbar p {
+        font-size: 14px;
+    }
+
+    #legit-nav-linkit a {
+        font-size: 16px;
+       margin: 0;
+    }
+
+    .buttons button {
+        font-size: 16px;
+        max-height: 50px;
+        align-self: center;
+    }
+}
+@media (max-width: 1200px) {
+
+    h1#sivunnimi {
+        font-size: 20px;
+        position: relative;
+        top: -50px;
+    }
+
+    #navbar {
+        max-width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    #navbar p {
+        font-size: 16px;
+    }
+
+    #legit-nav-linkit {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 35px;
+        margin: auto 0;
+        gap: 15px;
+        border-bottom: 2px solid #dd7be6;
+    }
+
+    #legit-nav-linkit a {
+        font-size: 14px;
+       margin: 0;
+    }
+
+    #mobile-nav-linkit {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 76px;
+        margin: auto 0;
+        gap: 15px;
+    }
+
+    .nav_bellSet {
+        height: 20px;
+        width: 20px;
+        padding: 10px;
+    } 
+
+    #navbarProfileImage {
+        height: 40px;
+        width: 40px;       
+    }
+
+    .buttons button {
+        font-size: 14px;
+        max-height: 50px;
+        align-self: center;
+    }
+}

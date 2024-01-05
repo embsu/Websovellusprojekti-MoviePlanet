@@ -1,0 +1,50 @@
+#group-info {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
+
+.group-infoitem {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center; 
+  font-size: 2em;
+}
+
+.groupinfopic {
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; 
+  margin-right: 20px;
+}
+
+.groupinfoname {
+  font-size: 1.2em; 
+  margin-bottom: 10px; 
+}
+
+.desc {
+  margin-top: 10px; 
+  text-align: left;
+}
+
+.descheader {
+  font-weight: bold; 
+}
+.desctext{
+  font-size: 1.2em;
+}
+.line{
+  margin-top: 20px;
+  border: 2px solid #a45caa;
+  width: 100%;
+
+}
